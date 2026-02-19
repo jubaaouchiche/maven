@@ -1,0 +1,10 @@
+---
+- name: deploy
+  hosts: all
+  become: true
+  remote_user: arezki
+  tasks:
+      - name: deploy
+        copy:
+            src: target/myapp-CICD.war
+            dest: /opt/tomcat/webapps

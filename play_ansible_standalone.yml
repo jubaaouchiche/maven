@@ -1,0 +1,9 @@
+---
+- name: deploy
+  hosts: all
+  become: true
+  tasks:
+      - name: deploy
+        copy:
+            src: myapp-CICD.war
+            dest: /opt/tomcat/webapps
